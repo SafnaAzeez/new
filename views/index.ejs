@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<title> MyEMployee List </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="/css/style.css" type="text/css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    
+<div class="form">
+    <h2 class="page-header">Account Login</h2>
+    <% if( success_msg.length > 0 ) {%>
+
+    <div class="alert alert-success"> <%= success_msg %> </div>
+    <%}%>
+
+      <% if(error_msg.length > 0) { %>
+          <div class="alert alert-danger"><%= error_msg %></div>
+      <% } %>
+
+      <% if(error.length > 0) { %>
+          <div class="alert alert-danger"><%= error %></div>
+      <% } %>
+            
+<form method='POST' action='/'>
+<br>
+<input type="username" name="username" id="username" placeholder="Username"/>
+<br>
+
+<input type="password" name="password" placeholder="password"/>
+
+<br>
+
+<input class='button' type="submit" name="submit">
+
+<p class="msg"> Not Registered <a href='/signup'> Sign Up </a> </p> 
+
+</form>
+<br>
+<h3 style:"color:grey">or login with</h3>
+<div class="social-login-buttons">
+<a href="/auth/google" class="btn btn-link-1 btn-link-1-google-plus"/><i class="fa fa-google-plus"></i> Google Plus </a>
+<a href="/auth/facebook" class="btn btn-link-1 btn-link-1-facebook"/> <i class="fa fa-facebook"></i> Facebook </a>
+<a href="/auth/twitter" class="btn btn-link-1 btn-link-1-twitter"/><i class="fa fa-twitter"></i> Twitter</a>
+</div>
+</div>
+
+</body>

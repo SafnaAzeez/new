@@ -1,0 +1,34 @@
+{
+  "name": "employye",
+  "version": "1.0.0",
+  "description": "",
+  "main": "employee.js",
+  "scripts": {
+    "start": "nodemon server/employee.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "*",
+    "bookshelf": "*",
+    "connect-flash": "*",
+    "cookie-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "^4.2.1",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-facebook": "^2.1.1",
+    "passport-github": "^1.1.0",
+    "passport-google-oauth20": "^1.0.0",
+    "passport-google-plus": "^0.5.1",
+    "passport-http": "*",
+    "passport-local": "* ",
+    "passport-twitter": "^1.0.4"
+  },
+  "author": "safna",
+  "license": "ISC"
+}

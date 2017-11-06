@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+             
+            <div class="col-9"><input type="text" id="task" class="form-control" placeholder="Enter your task"></div>
+            <input type="hidden" id="name" value="safna" name="name" >
+             <div class="col-3"><button class="btn btn-success btn-block">Submit</button></div>
+             <div class="col-12 mt-5">            
+                <ul class="tasks list-group"></ul>
+            </div>
+            </div>
+    </div>
+</body>
+<script src= "https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$('document').ready(function(){
+    $.ajax({
+            url: '/task',
+            method: 'GET',
+            data: {
+                name: 'safna'
+            },
+            success: function(data) {
+                if (data && data.length) {
+                    var items = '';
+                    data.forEach(function(result) {
+                         items = items + '<li class="list-group-item" id="'+result.id+'">'+result.task+'<button class="btn btn-danger float-right"><i class="fa fa-trash"></i></button></li>'
+                    })
+                    $('ul.tasks').html(items);
+                }
+            }
+        });
+
+
+          // create new task
+          $('button.btn').click(function() {
+            var task = $('#task').val();
+            var name=$('#name').val();
+            if (task) {
+                $.ajax({
+                    url: '/task',
+                    method: 'POST',
+                    data: {
+                        task,
+                        name
+                    },
+                    success: function(result) {
+                        if (result) {
+                            var items = '';
+                            $('ul.tasks').append('<li class="list-group-item" id="'+result.id+'">'+result.task+ '<button class="btn btn-danger float-right"><i class="fa fa-trash"></i></button></li>')
+                        }
+                       $('#task').val('');
+                    }
+                });
+            }
+        });
+
+        //delete task
+        $('.container').on('click','button.btn-danger',function(){
+
+            id=$(this).parent().attr('id');
+            that=$(this);
+
+            if(id){
+                $.ajax({
+                    url:'/task/'+id,
+                    method:'DELETE',
+                    success:function(data){
+                        if(data.status)
+                        {
+                            that.parent().remove();
+                        }
+                    }
+                })
+            }
+
+        })
+
+})
+</script>
+</html>

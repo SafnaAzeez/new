@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<title> MyEMployee List </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="/css/style.css" type="text/css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+        
+
+</ul>
+<div class='form'>
+<h2 class="page-header">Register</h2>
+
+<% if(errors!=undefined){ %>
+<ul >
+<% errors.forEach(function(errors){ %>
+
+<li class="alert alert-danger"> <%= errors.msg %> </li>
+
+<% }) }%>
+
+<form METHOD='POST' action='/signup'>
+ <br>
+<input type="text" name="name" placeholder='your name'>
+<br>
+<input type="text" name="username" placeholder='username'>
+<br>
+<input type="text" name="email" placeholder="email">
+<br>
+
+<select name="role"> 
+    
+        <option value="" disabled selected>Select your Role</option>
+        <option value="Customer">Customer</option> 
+        <option value="Waiter">Waiter</option> 
+        <option value="Chef">Chef</option> 
+        
+</select>
+
+<input type="password" name="password" placeholder="password">
+<br>
+<input type="password" name="password2" placeholder="Confirm password">
+<br>
+
+
+<br>
+
+<input class="button" type="submit"  name="submit">
+<p class="msg"> Already a Member? <a href='/'> login </a> </p> 
+
+
+</form>
+</div>
+</body>
+
+</html>

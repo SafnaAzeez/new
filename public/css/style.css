@@ -1,0 +1,131 @@
+.form{
+
+	width:360px;
+	padding:8% 0 0;
+	margin:auto;
+	position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.heading{
+  background-color:#fff130;
+  text-align: center;
+  width:30%;
+  margin:auto;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+table,td,th { 
+  border: 3px solid grey;
+  border-radius: 2px;
+  padding:15px;
+  text-align: left;
+  width:30%;
+}
+table{
+  border-collapse:collapse;
+}
+th{
+  background-color: #80858e;
+}
+.form select
+{
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  height:45px ;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  border-radius:0px;
+  box-sizing: border-box;
+  font-size: 14px;
+  
+}
+
+.form input 
+
+{
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1em;
+  padding: 0.75em 1em;
+  background-color: #1ce;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: SlateBlue !important;
+}
+
+.button{
+  background-color: SlateBlue !important;
+}
+
+.delete{
+  width:100px;
+  height:2em;
+  background-color: #ed471a;
+  color: #161211;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+body {
+
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+
+    
+}
+.btn-link-1 {
+  display: inline-block;
+  height: 50px;
+  margin: 5px;
+  padding: 16px 20px 0 20px;
+  background: #4aaf51;
+  font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    color: #fff;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+}
+.btn-link-1:hover, .btn-link-1:focus, .btn-link-1:active { outline: 0; opacity: 0.6; color: #fff; }
+
+.btn-link-1.btn-link-1-facebook { background: #4862a3 !important; }
+.btn-link-1.btn-link-1-twitter { background: #55acee !important; }
+.btn-link-1.btn-link-1-google-plus { background: #dd4b39 !important; }
+
+.btn-link-1 i {
+  padding-right: 5px;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+h3 {
+  font-size: 22px;
+    font-weight: 300;
+    color: #555;
+    line-height: 30px;
+}
+
